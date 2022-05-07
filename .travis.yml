@@ -1,85 +1,66 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=d20eadb9183f9f1866657be5b5e47b4a2398ff1ea0be29fbd50a26a43ea98b62
-    - REPORT_REPO_NAME=Travis-ci-code-coverage-reports
-    - secure: fpBhnY1Y4U0qx/BOFyO8OaS5gBPlF9Y8mFONF7WkphqbEJytlfIunbLFpQ1CX/9rDo1+96g0TDJUMx3bs4AnsgGEt16oSLOiRhKfyMcdsVRJry8a0PZMtYaEpBReyPv0Va0V7VTy1hFzLKTkmxKoIoYgNY0msocRypl/K6CF7l8=
+  - CC_TEST_REPORTER_ID=d20eadb9183f9f1866657be5b5e47b4a2398ff1ea0be29fbd50a26a43ea98b62
+  - REPORT_REPO_NAME=Travis-ci-code-coverage-reports
+  - secure: fpBhnY1Y4U0qx/BOFyO8OaS5gBPlF9Y8mFONF7WkphqbEJytlfIunbLFpQ1CX/9rDo1+96g0TDJUMx3bs4AnsgGEt16oSLOiRhKfyMcdsVRJry8a0PZMtYaEpBReyPv0Va0V7VTy1hFzLKTkmxKoIoYgNY0msocRypl/K6CF7l8=
+  - secure: AV40aTnL3Z6xV5ODJ3uD4GeAMlrDn556tiZfrhZaiA2s5UmTN3zGyG9xc7i4F1rUGWRfByiKNrxU4RPLqRH1n/UWrz10eE7PeW6plqRtiqGgWJyCmdFZfKU3uBVKNmaAJVa9xdCylko24gj0Gfo/q4aFAWXTcnnQ2+kD0h5+ZW1m/yl/ZyaAyTXhpG8s43i1epQE7AmDQbmkFolu8nJcleF/Mxc96eXVBKg695Z0vYH+G8HOj2eFX/4r5oIpt5TWM2IjhZIH8d7O1TkIKm553wbmbU/dJk1TpIHLrioNUkGC2fNACbJZkhXDHMrU/Kjr7HWgc/UGQpK1Z10umLuPjSKRHE9N/abHQcfUqzCQ369kqyQSorT0iiAX0JXrEyBFCzj1u5yGEnPiIV7Q4ezmStdXxoXoogXLHe/RIAzT7FVB/9ZrK4odjBB4eteBqdaxHUPGNlMSKVcwgFvPNGIMSPcQcrst5oliRx+hxaLkW+22Z/x9aEasRgEfeuFU89Cj78wnTZeQKZmlbBtoHn48jSsjXMs6rA/PjcgrSBcB55Uz5hM4w21UtTmvCPSrpFFVLP9fqpJy6CyImp1MlohcQBjzF7q8Z6orKV08GGoTq5zMl4qD6a3u/p0p+mA+cAn5EChAFRk8ZaeweFgeIWyMbSLnev28bHPDpm0xFbRcliA=
   matrix:
-    - TESTFOLDER=models
-    - TESTFOLDER=controllers
-    - TESTFOLDER=helpers
-    - TESTFOLDER=lib
+  - TESTFOLDER=lib
 language: ruby
 dist: trusty
 cache:
   bundler: true
   directories:
-    - vendor/assets/components
+  - vendor/assets/components
 rvm:
-  - 2.3.1
+- 2.6.6
 branches:
   only:
-    - main
+  - deploy
 before_install:
-  - uname -a
-  - lsb_release -a
-  - rvm list
-  - unset RAILS_ENV
-  - rvm rubygems current
-  - npm install -g bower
-  - bower install
-  - wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
-  - tar -xf geckodriver-v0.23.0-linux64.tar.gz
-  - sudo mv geckodriver /usr/local/bin/geckodriver
-  - geckodriver --version
-  - redis-server --version
-  - redis-server &
+- uname -a
+- lsb_release -a
+- rvm list
+- unset RAILS_ENV
+- rvm rubygems current
+- npm install -g bower
+- bower install
+- wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
+- tar -xf geckodriver-v0.23.0-linux64.tar.gz
+- sudo mv geckodriver /usr/local/bin/geckodriver
+- geckodriver --version
+- redis-server --version
+- redis-server &
 before_script:
-  - mysql -u root < db/grant_expertiza.sql
-  - cp config/database.yml.example config/database.yml
-  - cp config/secrets.yml.example config/secrets.yml
-  - export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
-  - bundle install
-  - bundle exec rails db:setup
-  # Test coverage offered by Code Climate
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-0.7.0-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
-  # Using xvfb to Run Tests That Require a GUI (https://docs.travis-ci.com/user/gui-and-headless-browsers/)
-  - "export DISPLAY=:99.0" # Display number for xvfb (for headless browser testing)
-  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1920x1080x16"
-  - sleep 3 # give xvfb some time to start
+- mysql -u root < db/grant_expertiza.sql
+- cp config/database.yml.example config/database.yml
+- cp config/secrets.yml.example config/secrets.yml
+- export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
+- bundle install
+- bundle exec rails db:setup
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-0.7.0-linux-amd64
+  > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
+- export DISPLAY=:99.0
+- "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile
+  --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1920x1080x16"
+- sleep 3
 script:
-  - "export DISPLAY=:99.0 && RUBYOPT=W0 bundle exec rspec spec/$TESTFOLDER 2> /dev/null"
 after_script:
-  - 
-  - ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.$TESTFOLDER.json"
-  # https://docs.travis-ci.com/user/environment-variables#convenience-variables
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then export TRAVIS_PULL_REQUEST=main; fi
-  - ls -lah coverage/
-  - cd $HOME
-  - git config --global user.email "zhu6@ncsu.edu"
-  - git config --global user.name "Winbobob"
-  - git clone --quiet https://$TOKEN@github.com/expertiza/$REPORT_REPO_NAME.git
-  - cd $REPORT_REPO_NAME
-  - if [ ! -d "./$TRAVIS_PULL_REQUEST" ]; then mkdir $TRAVIS_PULL_REQUEST; fi
-  - cp -Rf $HOME/build/expertiza/expertiza/coverage/codeclimate.$TESTFOLDER.json $HOME/$REPORT_REPO_NAME/$TRAVIS_PULL_REQUEST/codeclimate.$TESTFOLDER.json
-  - git add --all
-  - git commit -m "Add code climate coverage report"
-  - git push origin main
-  # Sum coverage parts into coverage/codeclimate.json and upload coverage/codeclimate.json
-  - if [ "$TESTFOLDER" == "models" ] && [ "$TRAVIS_TEST_RESULT" == 0 ]; then $HOME/build/expertiza/expertiza/cc-test-reporter sum-coverage $HOME/$REPORT_REPO_NAME/$TRAVIS_PULL_REQUEST/codeclimate.*.json && $HOME/build/expertiza/expertiza/cc-test-reporter upload-coverage; fi
+-
+after_success:
+- openssl aes-256-cbc -k $DEPLOY_KEY -in deploy_id_rsa_enc_travis -d -a -out config/deploy_id_rsa
+- chmod 400 config/deploy_id_rsa_enc_travis
+- chmod 400 config/deploy_id_rsa
+- bundle exec cap staging deploy --trace
 services:
-  - mysql
+- mysql
 addons:
   firefox: latest
 notifications:
   email:
     recipients:
-      - expertiza-support@lists.ncsu.edu
-      - jwbumga2@ncsu.edu
+    - cterse@ncsu.edu
     on_success: change
     on_failure: always
-  slack: expertiza-support:DS8GtpbAybxHVwwYNRvvbb39
-  webhooks:
-    urls:
-      - https://expertiza-travisci.herokuapp.com/?insertMode=update
