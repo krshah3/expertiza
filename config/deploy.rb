@@ -64,7 +64,7 @@ set :default_env,
 set :keep_releases, 10
 
 # Uncomment the following to require manually verifying the host key before first deploy.
-# set :ssh_options, verify_host_key: :secure
+set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_id_rsa")
 
 set :passenger_in_gemfile, true
 set :passenger_restart_with_touch, true
