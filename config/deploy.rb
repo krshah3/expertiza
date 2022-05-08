@@ -56,7 +56,7 @@ set :linked_dirs, %w[log pg_data vendor/assets/components]
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :default_env,
     'PASSENGER_INSTANCE_REGISTRY_DIR' => '/var/run/passenger-instreg',
-    'JAVA_HOME' => '/usr/lib/jvm/java-1.8.0-openjdk.x86_64'
+    'JAVA_HOME' => '/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.el7_9.x86_64'
 
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
