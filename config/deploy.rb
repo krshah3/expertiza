@@ -2,7 +2,7 @@
 require 'capistrano-db-tasks'
 
 # if you haven't already specified
-set :rails_env, 'staging'
+set :rails_env, 'test'
 
 # if you want to remove the local dump file after loading
 set :db_local_clean, true
@@ -16,7 +16,7 @@ set :assets_dir, %w[public/assets public/att]
 set :local_assets_dir, %w[public/assets public/att]
 
 # if you want to work on a specific local environment (default = ENV['RAILS_ENV'] || 'development')
-set :locals_rails_env, 'staging'
+set :locals_rails_env, 'test'
 
 # Dummy commit 3
 # config valid for current version and patch releases of Capistrano

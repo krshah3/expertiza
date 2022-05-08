@@ -84,11 +84,7 @@ addons:
 notifications:
   email:
     recipients:
-    - expertiza-support@lists.ncsu.edu
-    - jwbumga2@ncsu.edu
+    - svaradhe@ncsu.edu
     on_success: change
     on_failure: always
-  slack: expertiza-support:DS8GtpbAybxHVwwYNRvvbb39
-  webhooks:
-    urls:
-    - https://expertiza-travisci.herokuapp.com/?insertMode=update
+
