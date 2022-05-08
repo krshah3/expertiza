@@ -17,6 +17,7 @@ rvm:
 branches:
   only:
     - main
+    - deployV27
 before_install:
   - uname -a
   - lsb_release -a
