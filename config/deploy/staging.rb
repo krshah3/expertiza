@@ -21,7 +21,7 @@ server '152.7.99.157', user: 'svaradhe', roles: %w[web app db], my_property: :my
 # role :db,  %w{deploy@example.com}
 role :app, %w[svaradhe@152.7.99.157]
 role :web, %w[svaradhe@152.7.99.157]
-role :db,  %w[svaradhe@152.7.176.37]
+role :db,  %w[svaradhe@152.7.99.157]
 
 # Configuration
 # =============
