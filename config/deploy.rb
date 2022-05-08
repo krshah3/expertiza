@@ -24,6 +24,7 @@ lock '~> 3.17.0'
 set :application, 'expertiza'
 set :repo_url, 'https://github.com/Himanshuu-Gupta/expertiza.git'
 set :rvm_ruby_version, '2.6.6'
+set :branch, 'deploy'
 # Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
