@@ -18,6 +18,7 @@ set :local_assets_dir, %w[public/assets public/att]
 # if you want to work on a specific local environment (default = ENV['RAILS_ENV'] || 'development')
 set :locals_rails_env, 'staging'
 
+# Dummy commit 3
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.17.0'
 
