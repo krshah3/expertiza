@@ -667,7 +667,6 @@ DEPENDENCIES
   uglifier
   will_paginate
   zip-zip
-  scanf
 
 RUBY VERSION
    ruby 2.6.6p146
