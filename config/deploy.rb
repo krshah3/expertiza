@@ -19,7 +19,7 @@ set :local_assets_dir, %w[public/assets public/att]
 set :locals_rails_env, 'staging'
 
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.17.1'
+lock '~> 3.17.0'
 
 set :application, 'expertiza'
 set :repo_url, 'https://github.com/krshah3/expertiza'
@@ -63,7 +63,7 @@ set :default_env,
 # Default value for keep_releases is 5
 set :keep_releases, 10
 
-set :branch, 'deployV27' 
+set :branch, 'deploy_sneha' 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
