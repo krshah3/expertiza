@@ -8,6 +8,7 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 server '152.7.99.157', user: 'svaradhe', roles: %w[web app db], my_property: :my_value
 
+# Temp commit
 # role-based syntax
 # ==================
 
