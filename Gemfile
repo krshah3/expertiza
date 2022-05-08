@@ -85,6 +85,7 @@ gem 'railties', '5.1.0.rc2'
 gem 'redis-actionpack', '5.0.1'
 gem 'ed25519', '1.2.4'
 gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
+gem 'scanf'
 
 group :development do
   gem 'daemons'
