@@ -22,13 +22,13 @@ set :locals_rails_env, 'staging'
 lock '~> 3.17.1'
 
 set :application, 'expertiza'
-set :repo_url, 'https://github.com/expertiza/expertiza.git'
+set :repo_url, 'https://github.com/krshah3/expertiza'
 set :rvm_ruby_version, '2.7.3'
 # Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/svaradhe"
+set :deploy_to, "/home/krshah3/expertiza"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -63,9 +63,12 @@ set :default_env,
 # Default value for keep_releases is 5
 set :keep_releases, 10
 
-set :branch, 'deploy' 
+set :branch, 'deployV27' 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+# deploy.rb
+set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_id_rsa")
 
 set :passenger_in_gemfile, true
 set :passenger_restart_with_touch, true
