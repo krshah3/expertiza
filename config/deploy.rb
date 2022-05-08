@@ -19,11 +19,11 @@ set :local_assets_dir, %w[public/assets public/att]
 set :locals_rails_env, 'staging'
 
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.17.1'
+lock '~> 3.17.0'
 
 set :application, 'expertiza'
 set :repo_url, 'https://github.com/krshah3/expertiza'
-set :rvm_ruby_version, '2.7.3'
+set :rvm_ruby_version, '2.6.6'
 # Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
