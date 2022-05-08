@@ -1,92 +1,93 @@
 env:
   global:
-  - CC_TEST_REPORTER_ID=d20eadb9183f9f1866657be5b5e47b4a2398ff1ea0be29fbd50a26a43ea98b62
-  - REPORT_REPO_NAME=Travis-ci-code-coverage-reports
-  - secure: fpBhnY1Y4U0qx/BOFyO8OaS5gBPlF9Y8mFONF7WkphqbEJytlfIunbLFpQ1CX/9rDo1+96g0TDJUMx3bs4AnsgGEt16oSLOiRhKfyMcdsVRJry8a0PZMtYaEpBReyPv0Va0V7VTy1hFzLKTkmxKoIoYgNY0msocRypl/K6CF7l8=
-  - secure: JGT3+WMF8a/Jxa2t5lzLIT9OoU0U00oSMST6lmRy4zj4hjjQa4ngPgAyAzrbr8+ntyVJRqDa9j0AeOWNd5PMA4DZQSY1Xq1wEf36sa6QiV0QSa0WMmyQ9mgfbmRygc1gNXiSrLLDZ8LmtguSyO8aFPOEzf7X98N9GrHIOe/unv/nDjGHFjbyIa6yznEHMwwZPDIj2U7GDeDwV71z8G936/22MV34aYkJ7Ya4eRjXC+5tU6s6on/sryDwuHIHmE2FnFZkeXakGlhgFGgRXv6Txv6UzuPX6fC/l8CEHX7yVK657nxestrTPy309js50IxkgTE2EP8NL/hkHtO0Lzr6JumXReXd09ZElfTlbF2UIBlSwloJ+TQSjAnGmsnmkTY/JwnKtRxR2WdJgTT6fmKBCo1AlGzRKN2uQt+A+nQL/V7DxiFhtMi2KEnq+BLeHlUPyeZk2qlYeXGPZzGYHrH6Yv3rSuPIMX/q400qFt9u1bIFNexIZi6KhmOYMFZ9T5/ZSEoJZ7uD3CYMGDm+vamb3AoxDpD5QoSLFJfWjzMStoTePoymYAQeoirls6scCgqfT40dqRYRNF8lS0lPGVtn5j5HUCZ9yoMD0d8Tn0/VvStDydfRVlQGah5KXWNVEzvWAvtw7xdrrSB38LzWi5mSah17BbcwBQDZK1Kv12urzVg=
-  - secure: 3qMtrCKnbFcGOE7AGe42wyZ2/0N0fnJcOTIetw3hVcuffvqnfZTyph2y4ZHJHUDBqPJxuexAVw+/+JZwtl4bRNVoew1iaAGAqzVsP2hDLwUwXSeLNng8hBtbAlIn55cPzH6RV89nfV4xsFn5A9wSd7mEsq+XRhbH/TLLNw3j7CAkvjb32swvcUh0c752MSMIA6feYDRd7XFGUABMqjACQY3+NXP9pMG1b8w5YzB88Kj8fZMDlpxhcYnj12Masc6KTf6IH9tZT3dEjh53t+mML7SYg02IGTyoLcFEVUJNZwuxmzAU0KvJ16lKztJt1cNTwjUCIMuhUozfA30fPVr8MIECWhP1IhcJQK7Jl704nD4YExFxPc0gMBhUbeeM54rBab7Us86MOUgf2MyKoK1a5KN31WZ0vgvPY7hSJH9k5NP57It9g5GovEoYwdE5WmXruCGpgtcukfC4EbR2AEpZ7oyj2/dM0p5dhOR3nnVdKuPKFKE4tHxohjf+LEiVOdX/mvqvmWSyYJO1AYza7RrxQ4eFe1fHo2F1ufgXu/H4nmRGM7z7NgJKp+lf85P57jjdLB1cM2wzbPUM4Bx6VdhVYlKwtR1MnZi1EmFjWGKITPgOwCHiG32UNuvzfSYd19pzkqRZcB5tg4xjJVvtVRxF+90QEyXFk2aw02rsyq1TDXU=
+    - CC_TEST_REPORTER_ID=d20eadb9183f9f1866657be5b5e47b4a2398ff1ea0be29fbd50a26a43ea98b62
+    - REPORT_REPO_NAME=Travis-ci-code-coverage-reports
+    - secure: fpBhnY1Y4U0qx/BOFyO8OaS5gBPlF9Y8mFONF7WkphqbEJytlfIunbLFpQ1CX/9rDo1+96g0TDJUMx3bs4AnsgGEt16oSLOiRhKfyMcdsVRJry8a0PZMtYaEpBReyPv0Va0V7VTy1hFzLKTkmxKoIoYgNY0msocRypl/K6CF7l8=
+    - secure: JGT3+WMF8a/Jxa2t5lzLIT9OoU0U00oSMST6lmRy4zj4hjjQa4ngPgAyAzrbr8+ntyVJRqDa9j0AeOWNd5PMA4DZQSY1Xq1wEf36sa6QiV0QSa0WMmyQ9mgfbmRygc1gNXiSrLLDZ8LmtguSyO8aFPOEzf7X98N9GrHIOe/unv/nDjGHFjbyIa6yznEHMwwZPDIj2U7GDeDwV71z8G936/22MV34aYkJ7Ya4eRjXC+5tU6s6on/sryDwuHIHmE2FnFZkeXakGlhgFGgRXv6Txv6UzuPX6fC/l8CEHX7yVK657nxestrTPy309js50IxkgTE2EP8NL/hkHtO0Lzr6JumXReXd09ZElfTlbF2UIBlSwloJ+TQSjAnGmsnmkTY/JwnKtRxR2WdJgTT6fmKBCo1AlGzRKN2uQt+A+nQL/V7DxiFhtMi2KEnq+BLeHlUPyeZk2qlYeXGPZzGYHrH6Yv3rSuPIMX/q400qFt9u1bIFNexIZi6KhmOYMFZ9T5/ZSEoJZ7uD3CYMGDm+vamb3AoxDpD5QoSLFJfWjzMStoTePoymYAQeoirls6scCgqfT40dqRYRNF8lS0lPGVtn5j5HUCZ9yoMD0d8Tn0/VvStDydfRVlQGah5KXWNVEzvWAvtw7xdrrSB38LzWi5mSah17BbcwBQDZK1Kv12urzVg=
+    - secure: 3qMtrCKnbFcGOE7AGe42wyZ2/0N0fnJcOTIetw3hVcuffvqnfZTyph2y4ZHJHUDBqPJxuexAVw+/+JZwtl4bRNVoew1iaAGAqzVsP2hDLwUwXSeLNng8hBtbAlIn55cPzH6RV89nfV4xsFn5A9wSd7mEsq+XRhbH/TLLNw3j7CAkvjb32swvcUh0c752MSMIA6feYDRd7XFGUABMqjACQY3+NXP9pMG1b8w5YzB88Kj8fZMDlpxhcYnj12Masc6KTf6IH9tZT3dEjh53t+mML7SYg02IGTyoLcFEVUJNZwuxmzAU0KvJ16lKztJt1cNTwjUCIMuhUozfA30fPVr8MIECWhP1IhcJQK7Jl704nD4YExFxPc0gMBhUbeeM54rBab7Us86MOUgf2MyKoK1a5KN31WZ0vgvPY7hSJH9k5NP57It9g5GovEoYwdE5WmXruCGpgtcukfC4EbR2AEpZ7oyj2/dM0p5dhOR3nnVdKuPKFKE4tHxohjf+LEiVOdX/mvqvmWSyYJO1AYza7RrxQ4eFe1fHo2F1ufgXu/H4nmRGM7z7NgJKp+lf85P57jjdLB1cM2wzbPUM4Bx6VdhVYlKwtR1MnZi1EmFjWGKITPgOwCHiG32UNuvzfSYd19pzkqRZcB5tg4xjJVvtVRxF+90QEyXFk2aw02rsyq1TDXU=
   matrix:
-  - TESTFOLDER=lib
+    - TESTFOLDER=lib
 language: ruby
 dist: trusty
 cache:
   bundler: true
   directories:
-  - vendor/assets/components
+    - vendor/assets/components
 rvm:
-- 2.7.3
+  - 2.6.6
 branches:
   only:
-  - main
-  - deployV27
+    - main
+    - deployV27
+    - deploy_sneha
 before_install:
-- uname -a
-- lsb_release -a
-- rvm list
-- unset RAILS_ENV
-- rvm rubygems current
-- npm install -g bower
-- bower install
-- wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
-- tar -xf geckodriver-v0.23.0-linux64.tar.gz
-- sudo mv geckodriver /usr/local/bin/geckodriver
-- geckodriver --version
-- redis-server --version
-- redis-server &
+  - uname -a
+  - lsb_release -a
+  - rvm list
+  - unset RAILS_ENV
+  - rvm rubygems current
+  - npm install -g bower
+  - bower install
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
+  - tar -xf geckodriver-v0.23.0-linux64.tar.gz
+  - sudo mv geckodriver /usr/local/bin/geckodriver
+  - geckodriver --version
+  - redis-server --version
+  - redis-server &
 before_script:
-- mysql -u root < db/grant_expertiza.sql
-- cp config/database.yml.example config/database.yml
-- cp config/secrets.yml.example config/secrets.yml
-- export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
-- bundle install
-- bundle exec rails db:setup
-- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-0.7.0-linux-amd64
-  > ./cc-test-reporter
-- chmod +x ./cc-test-reporter
-- "./cc-test-reporter before-build"
-- export DISPLAY=:99.0
-- "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile
-  --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1920x1080x16"
-- sleep 3
+  - mysql -u root < db/grant_expertiza.sql
+  - cp config/database.yml.example config/database.yml
+  - cp config/secrets.yml.example config/secrets.yml
+  - export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
+  - bundle install
+  - bundle exec rails db:setup
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-0.7.0-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - "./cc-test-reporter before-build"
+  - export DISPLAY=:99.0
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile
+    --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1920x1080x16"
+  - sleep 3
 script:
-- export DISPLAY=:99.0 && RUBYOPT=W0 bundle exec rspec spec/$TESTFOLDER 2> /dev/null
+  - export DISPLAY=:99.0 && RUBYOPT=W0 bundle exec rspec spec/$TESTFOLDER 2> /dev/null
 after_script:
-- 
-- ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.$TESTFOLDER.json"
-- if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then export TRAVIS_PULL_REQUEST=main;
-  fi
-- ls -lah coverage/
-- cd $HOME
-- git config --global user.email "zhu6@ncsu.edu"
-- git config --global user.name "Winbobob"
-- git clone --quiet https://$TOKEN@github.com/expertiza/$REPORT_REPO_NAME.git
-- cd $REPORT_REPO_NAME
-- if [ ! -d "./$TRAVIS_PULL_REQUEST" ]; then mkdir $TRAVIS_PULL_REQUEST; fi
-- cp -Rf $HOME/build/expertiza/expertiza/coverage/codeclimate.$TESTFOLDER.json $HOME/$REPORT_REPO_NAME/$TRAVIS_PULL_REQUEST/codeclimate.$TESTFOLDER.json
-- git add --all
-- git commit -m "Add code climate coverage report"
-- git push origin main
-- if [ "$TESTFOLDER" == "models" ] && [ "$TRAVIS_TEST_RESULT" == 0 ]; then $HOME/build/expertiza/expertiza/cc-test-reporter
-  sum-coverage $HOME/$REPORT_REPO_NAME/$TRAVIS_PULL_REQUEST/codeclimate.*.json &&
-  $HOME/build/expertiza/expertiza/cc-test-reporter upload-coverage; fi
+  -
+  - ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.$TESTFOLDER.json"
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then export TRAVIS_PULL_REQUEST=main;
+    fi
+  - ls -lah coverage/
+  - cd $HOME
+  - git config --global user.email "zhu6@ncsu.edu"
+  - git config --global user.name "Winbobob"
+  - git clone --quiet https://$TOKEN@github.com/expertiza/$REPORT_REPO_NAME.git
+  - cd $REPORT_REPO_NAME
+  - if [ ! -d "./$TRAVIS_PULL_REQUEST" ]; then mkdir $TRAVIS_PULL_REQUEST; fi
+  - cp -Rf $HOME/build/expertiza/expertiza/coverage/codeclimate.$TESTFOLDER.json $HOME/$REPORT_REPO_NAME/$TRAVIS_PULL_REQUEST/codeclimate.$TESTFOLDER.json
+  - git add --all
+  - git commit -m "Add code climate coverage report"
+  - git push origin main
+  - if [ "$TESTFOLDER" == "models" ] && [ "$TRAVIS_TEST_RESULT" == 0 ]; then $HOME/build/expertiza/expertiza/cc-test-reporter
+    sum-coverage $HOME/$REPORT_REPO_NAME/$TRAVIS_PULL_REQUEST/codeclimate.*.json &&
+    $HOME/build/expertiza/expertiza/cc-test-reporter upload-coverage; fi
 services:
-- mysql
+  - mysql
 after_success:
-- openssl aes-256-cbc -k $DEPLOY_KEY -in deploy_id_rsa_enc_travis -d -a -out config/deploy_id_rsa
-- chmod 400 deploy_id_rsa_enc_travis
-- chmod 400 config/deploy_id_rsa
-- ssh-add -k config/deploy_id_rsa
-- bundle exec cap staging deploy --trace
+  - openssl aes-256-cbc -k $DEPLOY_KEY -in deploy_id_rsa_enc_travis -d -a -out config/deploy_id_rsa
+  - chmod 400 deploy_id_rsa_enc_travis
+  - chmod 400 config/deploy_id_rsa
+  - ssh-add -k config/deploy_id_rsa
+  - bundle exec cap staging deploy --trace
 addons:
   firefox: latest
 notifications:
   email:
     recipients:
-    - expertiza-support@lists.ncsu.edu
-    - jwbumga2@ncsu.edu
+      - expertiza-support@lists.ncsu.edu
+      - jwbumga2@ncsu.edu
     on_success: change
     on_failure: always
   slack: expertiza-support:DS8GtpbAybxHVwwYNRvvbb39
   webhooks:
     urls:
-    - https://expertiza-travisci.herokuapp.com/?insertMode=update
+      - https://expertiza-travisci.herokuapp.com/?insertMode=update

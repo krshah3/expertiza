@@ -23,7 +23,7 @@ lock '~> 3.17.1'
 
 set :application, 'expertiza'
 set :repo_url, 'https://github.com/krshah3/expertiza'
-set :rvm_ruby_version, '2.7.3'
+set :rvm_ruby_version, '2.6.6'
 # Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
