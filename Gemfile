@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.7.3'
 
 gem 'rails', '= 5.1.0.rc2'
 
@@ -83,6 +83,8 @@ gem 'will_paginate'
 gem 'zip-zip'
 gem 'railties', '5.1.0.rc2'
 gem 'redis-actionpack', '5.0.1'
+gem 'ed25519', '1.2.4'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 
 group :development do
   gem 'daemons'

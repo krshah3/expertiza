@@ -2,7 +2,7 @@
 require 'capistrano-db-tasks'
 
 # if you haven't already specified
-set :rails_env, 'production'
+set :rails_env, 'staging'
 
 # if you want to remove the local dump file after loading
 set :db_local_clean, true
@@ -16,19 +16,19 @@ set :assets_dir, %w[public/assets public/att]
 set :local_assets_dir, %w[public/assets public/att]
 
 # if you want to work on a specific local environment (default = ENV['RAILS_ENV'] || 'development')
-set :locals_rails_env, 'production'
+set :locals_rails_env, 'staging'
 
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.10.1'
+lock '~> 3.17.1'
 
 set :application, 'expertiza'
 set :repo_url, 'https://github.com/expertiza/expertiza.git'
-set :rvm_ruby_version, '2.2.7'
+set :rvm_ruby_version, '2.7.3'
 # Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/home/svaradhe"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -63,6 +63,7 @@ set :default_env,
 # Default value for keep_releases is 5
 set :keep_releases, 10
 
+set :branch, 'deploy' 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
