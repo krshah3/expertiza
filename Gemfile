@@ -19,7 +19,7 @@ gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-db-tasks', require: false
 # https://www.phusionpassenger.com/library/deploy/apache/automating_app_updates/ruby/
-gem 'capistrano-passenger'
+gem 'capistrano-passenger', '>= 0.2.1'
 gem 'capistrano-rails'
 gem 'capistrano-rvm'
 gem 'chartjs-ror'
