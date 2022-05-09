@@ -75,9 +75,13 @@ services:
   - mysql
 after_success:
   - openssl aes-256-cbc -k $DEPLOY_KEY -in deploy_id_rsa_enc_travis -d -a -out config/deploy_id_rsa
-  - chmod 400 deploy_id_rsa_enc_travis
-  - chmod 400 config/deploy_id_rsa
-  - ssh-add -k config/deploy_id_rsa
+  - openssl aes-256-cbc -k $DEPLOY_KEY -in dokey_rsa_enc_travis -d -a -out config/dokey_rsa
+  # - chmod 400 deploy_id_rsa_enc_travis
+  # - chmod 400 config/deploy_id_rsa
+  - chmod 400 dokey_rsa_enc_travis
+  - chmod 400 config/dokey_rsa
+  # - ssh-add -k config/deploy_id_rsa
+  - ssh-add -k config/dokey_rsa
   - bundle exec cap staging deploy --trace
 addons:
   firefox: latest

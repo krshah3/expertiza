@@ -29,8 +29,8 @@ set :rvm_ruby_version, '2.6.6'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/svaradhe"
-# set :deploy_to, "/root"
+# set :deploy_to, "/home/svaradhe"
+set :deploy_to, "/root"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
