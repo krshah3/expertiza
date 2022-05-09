@@ -75,15 +75,18 @@ set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_i
 set :passenger_in_gemfile, true
 set :passenger_restart_with_touch, true
 
+
+Rake::Task["deploy:migrate"].clear_actions
+
 namespace :deploy do
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
-      task  :migrating do
-        puts "Skipped migration task"
-      end
-      task  :migrate do
-        puts "Skipped migrate task"
-      end
+      # task  :migrating do
+      #   puts "Skipped migration task"
+      # end
+      # task  :migrate do
+      #   puts "Skipped migrate task"
+      # end
       # Here we can do anything such as:
       # within release_path do
       #   execute :rake, 'cache:clear'
