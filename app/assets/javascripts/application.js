@@ -14,20 +14,27 @@
 //= require react_ujs
 //= require components
 //= require jquery
+//= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery-colorbox
 //= require jquery.colorbox
+//= require tinymce-jquery
 //= require jquery.datetimepicker
 //= require jquery.datetimepicker/init
 //= require hoverIntent
 //= require superfish
 //= require jquery.ui.all
+//= require react-simpletabs
+//= require sisyphus
 //= require awesomplete
 //= require_self
 //= require_tree .
 //= require jquery.datetimepicker
 //= require jquery-tablesorter
 //= require awesome_input
+//= require jquery-bar-rating/jquery.barrating
 //= require Chart.min
+//= require moment
 //= require bootstrap-datetimepicker
 // Eliminate the “element.dispatchEvent is not a function” error
 jQuery.noConflict();

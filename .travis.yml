@@ -78,6 +78,17 @@ after_success:
 - chmod 400 deploy_id_rsa_enc_travis
 - chmod 400 config/deploy_id_rsa
 - ssh-add -k config/deploy_id_rsa
+- rvm rubygems current
+- npm install -g bower
+- bower install
+- wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
+- tar -xf geckodriver-v0.23.0-linux64.tar.gz
+- sudo mv geckodriver /usr/local/bin/geckodriver
+- geckodriver --version
+- redis-server --version
+- redis-server &
+- bundle install
+- bundle exec rails db:setup
 - bundle exec cap staging deploy --trace
 addons:
   firefox: latest
