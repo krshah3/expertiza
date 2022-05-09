@@ -81,6 +81,9 @@ namespace :deploy do
       task  :migrating do
         puts "Skipped migration task"
       end
+      task  :migrate do
+        puts "Skipped migrate task"
+      end
       # Here we can do anything such as:
       # within release_path do
       #   execute :rake, 'cache:clear'
