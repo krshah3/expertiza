@@ -21,7 +21,6 @@
 //= require hoverIntent
 //= require superfish
 //= require jquery.ui.all
-//= require sisyphus
 //= require awesomplete
 //= require_self
 //= require_tree .
@@ -30,7 +29,6 @@
 //= require awesome_input
 //= require jquery-bar-rating/jquery.barrating
 //= require Chart.min
-//= require moment
 //= require bootstrap-datetimepicker
 // Eliminate the “element.dispatchEvent is not a function” error
 jQuery.noConflict();
